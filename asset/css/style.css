@@ -1,100 +1,171 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
+/* Reset CSS */
+* {
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 header {
-    background-color: #ff4d4d;
-    color: white;
+    background-color: #333;
+    color: #fff;
     padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 header p {
-    margin: 10px 0 0;
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
-.container {
-    width: 90%;
-    max-width: 800px;
-    margin: 20px auto;
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    color: #66ccff;
+}
+
+.hero {
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #66ccff;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #4da6ff;
+}
+
+.about {
+    padding: 80px 0;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.mods {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.mod-card {
+    background-color: #fff;
     padding: 20px;
-    background: white;
-    border-radius: 10px;
+    margin: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.mod-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.mod-card h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.mod-card p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+.contact {
+    background-color: #66ccff;
+    padding: 100px 0;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 form {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-input[type="url"] {
+form input, form textarea {
+    display: block;
+    width: 100%;
     padding: 10px;
+    margin-bottom: 10px;
     font-size: 1em;
-    width: 60%;
-    border: 2px solid #ff4d4d;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-    transition: border-color 0.3s;
 }
 
-input[type="url"]:focus {
-    border-color: #e60000;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #ff4d4d;
-    color: white;
+form button {
+    background-color: #333;
+    color: #fff;
     border: none;
-    border-radius: 0 5px 5px 0;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #e60000;
-}
-
-#mirrorLinks {
-    margin-top: 20px;
-}
-
-.mirror-link {
-    display: block;
-    margin-bottom: 10px;
-    color: #ff4d4d;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.mirror-link:hover {
-    color: #e60000;
+form button:hover {
+    background-color: #666;
 }
 
 footer {
     background-color: #333;
-    color: white;
+    color: #fff;
     text-align: center;
-    padding: 10px 0;
-    margin-top: auto;
-}
-
-footer p {
-    margin: 0;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
