@@ -3,21 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red URL Shortener</title>
+    <title>Mirror Link Generator</title>
     <link rel="stylesheet" href="./asset/css/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Red URL Shortener</h1>
-        <form action="shorten.php" method="post">
-            <input type="url" name="long_url" placeholder="Enter your URL here" required>
-            <button type="submit">Shorten URL</button>
-        </form>
-        <?php
-        if (isset($_GET['short_url'])) {
-            echo "<p>Shortened URL: <a href='{$_GET['short_url']}' target='_blank'>{$_GET['short_url']}</a></p>";
-        }
-        ?>
-    </div>
+    <header>
+        <div class="container">
+            <h1>Mirror Link Generator</h1>
+            <p>Create multiple mirror links for your URLs instantly</p>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <form id="linkForm">
+                <input type="url" id="originalUrl" placeholder="Enter your URL here" required>
+                <button type="submit">Generate Mirrors</button>
+            </form>
+            <div id="mirrorLinks"></div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mirror Link Generator. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="./asset/js/script.js"></script>
 </body>
 </html>
