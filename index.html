@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SafeLinku</title>
-<link rel="stylesheet" href="./asset/css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red URL Shortener</title>
+    <link rel="stylesheet" href="./asset/css/style.css">
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>SafeLinku</h1>
-            <p>Please wait while we redirect you...</p>
-        </header>
-        <section class="countdown">
-            <p>You will be redirected in <span id="countdown">5</span> seconds.</p>
-        </section>
-        <section class="bypass">
-            <button id="bypassBtn">Bypass</button>
-        </section>
+        <h1>Red URL Shortener</h1>
+        <form action="shorten.php" method="post">
+            <input type="url" name="long_url" placeholder="Enter your URL here" required>
+            <button type="submit">Shorten URL</button>
+        </form>
+        <?php
+        if (isset($_GET['short_url'])) {
+            echo "<p>Shortened URL: <a href='{$_GET['short_url']}' target='_blank'>{$_GET['short_url']}</a></p>";
+        }
+        ?>
     </div>
-
-    <script src="./asset/js/script.js"></script>
 </body>
 </html>
