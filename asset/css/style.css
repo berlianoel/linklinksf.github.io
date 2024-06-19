@@ -8,6 +8,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #f0f0f0;
 }
 
 .container {
@@ -19,36 +20,32 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2em;
+header img {
+    height: 50px;
+    vertical-align: middle;
 }
 
-header p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-nav ul {
+header nav ul {
     list-style-type: none;
     text-align: center;
+    margin-top: 10px;
 }
 
-nav ul li {
+header nav ul li {
     display: inline;
     margin: 0 10px;
 }
 
-nav ul li a {
+header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.2em;
 }
 
-nav ul li a:hover {
+header nav ul li a:hover {
     color: #66ccff;
 }
 
@@ -61,39 +58,13 @@ nav ul li a:hover {
     padding: 100px 0;
 }
 
-.hero h2 {
+.hero h1 {
     font-size: 3em;
     margin-bottom: 20px;
 }
 
-.btn {
-    display: inline-block;
-    background-color: #66ccff;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1.2em;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #4da6ff;
-}
-
-.about {
+.mod-list {
     padding: 80px 0;
-    background-color: #f2f2f2;
-    text-align: center;
-}
-
-.about h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.mods {
-    padding: 100px 0;
     text-align: center;
 }
 
@@ -118,6 +89,17 @@ nav ul li a:hover {
 .mod-card p {
     font-size: 1.1em;
     color: #666;
+}
+
+.about {
+    padding: 80px 0;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
 .contact {
